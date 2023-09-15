@@ -1,3 +1,177 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  height: 100vh;
+  background: url("../images/desktop/image-header.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.navigation button {
+  font-family: "Fraunces", serif;
+  color: hsl(212, 27%, 19%);
+  transition: all 0.3s;
+}
+
+.navigation button:hover {
+  background-color: rgb(132, 212, 255);
+  color: hsl(0, 0%, 100%);
+}
+
+.header-title {
+  position: absolute;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+}
+.header-arrow-icon {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%);
+  /* animation: move 1.8s infinite ease-in-out; */
+}
+
+@keyframes move {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header-title {
+    font-size: 3rem;
+  }
+  .nav-button {
+    padding: 0.8rem 1.8rem;
+  }
+}
+@media (max-width: 1000px) {
+  .header-title {
+    font-size: 2.8rem;
+  }
+  .nav-button {
+    padding: 0.6rem 1.6rem;
+  }
+}
+@media (max-width: 700px) {
+  .header-title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 640px) {
+  .header-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .header-logo img {
+    width: 9.2rem;
+  }
+  .mobile-hamburger-icon {
+    width: 1.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    background: url("../images/mobile/image-header.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+  .header-arrow-icon {
+    margin-top: 10%;
+  }
+  .header-logo img {
+    width: 8rem;
+  }
+  .mobile-hamburger-icon {
+    width: 1.4rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .header-title {
+    white-space: nowrap;
+  }
+}
+
+/* font-family: 'Barlow', sans-serif; */
+/* font-family: 'Fraunces', serif; */
+
+/* .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  } */
+
+/**** landing page content /****
+  /*  About
+    Services
+    Projects
+    Contact
+  
+    We are creatives
+  
+    Transform your brand
+  
+    We are a full-service creative agency specializing in helping brands grow fast. 
+    Engage your clients through compelling visuals that do most of the marketing for you.
+  
+    Learn more
+  
+    Stand out to the right audience
+  
+    Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+  
+    Learn more
+  
+    Graphic design
+    Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+  
+    Photography
+    Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+  
+    Client testimonials
+  
+    We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+    Emily R.
+    Marketing Director
+  
+    Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+    Thomas S.
+    Chief Operating Officer
+  
+    Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+    Jennie F.
+    Business Owner
+  
+    About
+    Services
+    Projects
+    Contact
+    */
