@@ -12,13 +12,13 @@ header {
   background: url("../images/desktop/image-header.jpg");
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
   position: relative;
 }
 
 .navigation button {
   font-family: "Fraunces", serif;
   color: hsl(212, 27%, 19%);
+  font-weight: 900;
   transition: all 0.3s;
 }
 
@@ -43,6 +43,93 @@ header {
   /* animation: move 1.8s infinite ease-in-out; */
 }
 
+/******* This is a general styles *******/
+.section-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "s-content s-image";
+}
+
+.section-title-font {
+  font-family: "Fraunces", serif;
+}
+
+.section-text-font {
+  font-family: "Barlow", sans-serif;
+}
+
+.call-to-action {
+  margin: 0 auto;
+  width: 55%;
+}
+
+.section-button {
+  margin-top: 3rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+
+.section-button::after {
+  content: "";
+  position: absolute;
+  height: 0.6em;
+  width: 111%;
+  background: hsl(51, 100%, 49%);
+  border-radius: 10px;
+  opacity: 0.3;
+  left: -5px;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.section-button:hover::after {
+  opacity: 1;
+}
+.section-content {
+  grid-area: s-content;
+}
+
+.section-img {
+  grid-area: s-image;
+}
+.section-title {
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 22%;
+  font-size: 2.5rem;
+}
+
+.section-text {
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  color: hsl(236, 6%, 51%);
+  font-weight: 600;
+}
+
+/******* This is a general styles ending *******/
+.section--2-container {
+  grid-template-areas: "s-image s-content";
+}
+
+.section--2-title {
+  width: 60%;
+}
+
+.section--2-text {
+  width: 60%;
+}
+
+.call-to-action--2 {
+  width: 60%;
+}
+.section--2-button::after {
+  background: hsl(7, 99%, 70%);
+}
+
 @keyframes move {
   0% {
     margin-top: 0;
@@ -59,16 +146,70 @@ header {
   .header-title {
     font-size: 3rem;
   }
+  .section-title {
+    font-size: 2.3rem;
+    margin-top: 19%;
+  }
   .nav-button {
     padding: 0.8rem 1.8rem;
   }
 }
+
+@media (max-width: 1100px) {
+  .section-title {
+    margin-top: 12%;
+  }
+}
+
 @media (max-width: 1000px) {
   .header-title {
     font-size: 2.8rem;
   }
   .nav-button {
     padding: 0.6rem 1.6rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-button {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .section-title {
+    margin-top: 5%;
+    font-size: 1.8rem;
+  }
+
+  .section-text {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 805px) {
+  .section-container {
+    grid-template-columns: 1fr;
+    margin-bottom: 4rem;
+    grid-template-areas:
+      "s-image"
+      "s-content";
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .section-text {
+    font-size: 1.2rem;
+  }
+
+  .section-button {
+    font-size: 1.1rem;
+  }
+
+  .section-content {
+    gap: 15px;
   }
 }
 @media (max-width: 700px) {
@@ -78,20 +219,41 @@ header {
 }
 @media (max-width: 640px) {
   .header-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+  .section-text {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 600px) {
   .header-title {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     text-align: center;
   }
+
   .header-logo img {
     width: 9.2rem;
   }
   .mobile-hamburger-icon {
     width: 1.7rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    width: 70%;
+  }
+
+  .section-text {
+    width: 70%;
+  }
+
+  .call-to-action {
+    width: 70%;
   }
 }
 
@@ -109,6 +271,23 @@ header {
   }
   .mobile-hamburger-icon {
     width: 1.4rem;
+  }
+  .section-title {
+    width: 80%;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .section-text {
+    text-align: center;
+    width: 80%;
+  }
+  .call-to-action {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-button {
+    font-size: 1rem;
   }
 }
 
@@ -139,14 +318,13 @@ header {
   
     Transform your brand
   
-    We are a full-service creative agency specializing in helping brands grow fast. 
-    Engage your clients through compelling visuals that do most of the marketing for you.
+    
   
     Learn more
   
-    Stand out to the right audience
+   
   
-    Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+   
   
     Learn more
   
