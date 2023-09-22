@@ -534,6 +534,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -626,6 +634,11 @@ video {
   padding-top: 2.5rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-\[1\.2rem\] {
   font-size: 1.2rem;
 }
@@ -643,6 +656,14 @@ video {
   font-weight: 900;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
 .leading-normal {
   line-height: 1.5;
 }
@@ -653,6 +674,16 @@ video {
 
 .tracking-\[0\.5rem\] {
   letter-spacing: 0.5rem;
+}
+
+.text-darkDesaturatedCyan {
+  --tw-text-opacity: 1;
+  color: hsl(167 40% 24% / var(--tw-text-opacity));
+}
+
+.text-darkModerateCyan {
+  --tw-text-opacity: 1;
+  color: hsl(168 34% 41% / var(--tw-text-opacity));
 }
 
 .text-veryDarkDesaturatedBlue {
@@ -704,7 +735,7 @@ header {
   left: 50%;
   top: 45%;
   transform: translateX(-50%);
-  /* animation: move 1.8s infinite ease-in-out; */
+  animation: move 1.8s infinite ease-in-out;
 }
 
 /******* This is a general styles *******/
@@ -799,6 +830,38 @@ header {
   background: hsl(7, 99%, 70%);
 }
 
+.section--3-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section-3-info-container {
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, 5%);
+  padding: 10px;
+  width: 70%;
+  gap: 1.8rem;
+}
+
+.section--3-headers {
+  font-family: "Fraunces", serif;
+}
+
+.section--3-texts {
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+  height: 7rem;
+}
+
+.section--3-left-section-text {
+  width: 80%;
+}
+
+.section--3-right-section-text {
+  width: 70%;
+}
+
 @keyframes move {
   0% {
     margin-top: 0;
@@ -828,9 +891,20 @@ header {
   }
 }
 
+@media (max-width: 1200px) {
+  .section--3-right-section-text {
+    width: 80%;
+  }
+}
+
 @media (max-width: 1100px) {
   .section-title {
     margin-top: 12%;
+  }
+
+  .section-3-info-container {
+    bottom: -7%;
+    transform: translate(-50%, -7%);
   }
 }
 
@@ -850,6 +924,18 @@ header {
   .section-button {
     margin-top: 1.5rem;
   }
+
+  .section-3-info-container {
+    gap: 1rem;
+  }
+
+  .section--3-left-section-text {
+    width: 90%;
+  }
+
+  .section--3-right-section-text {
+    width: 80%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -860,6 +946,22 @@ header {
 
   .section-text {
     margin-top: 1rem;
+  }
+
+  .section-3-info-container {
+    gap: 0.7rem;
+  }
+
+  .section--3-headers {
+    font-size: 1.5rem;
+  }
+
+  .section--3-left-section-text {
+    width: 100%;
+  }
+
+  .section--3-right-section-text {
+    width: 90%;
   }
 }
 
@@ -887,6 +989,28 @@ header {
 
   .section-content {
     gap: 15px;
+  }
+
+  .section--3-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-3-info-container {
+    bottom: 10%;
+    transform: translate(-50%, 10%);
+    gap: 1.4rem;
+  }
+
+  .section--3-headers {
+    font-size: 1.8rem;
+  }
+
+  .section--3-left-section-text {
+    width: 80%;
+  }
+
+  .section--3-right-section-text {
+    width: 70%;
   }
 }
 
@@ -936,6 +1060,33 @@ header {
   .call-to-action {
     width: 70%;
   }
+
+  .section-3-info-container {
+    bottom: 0%;
+    transform: translate(-50%, 0%);
+    gap: 1.4rem;
+  }
+
+  .section--3-left-section-text {
+    width: 90%;
+  }
+
+  .section--3-right-section-text {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-3-info-container {
+    bottom: -10%;
+    transform: translate(-50%, -10%);
+    gap: 1.4rem;
+    width: 90%;
+  }
+
+  .section--3-texts {
+    width: 100%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -943,6 +1094,7 @@ header {
     background: url("../images/mobile/image-header.jpg");
     background-position: center center;
     background-size: cover;
+    height: 80vh;
   }
 
   .header-arrow-icon {
@@ -976,6 +1128,17 @@ header {
   .section-button {
     font-size: 1rem;
   }
+
+  .section-3-info-container {
+    bottom: 10%;
+    transform: translate(-50%, 10%);
+    gap: 1.4rem;
+    width: 95%;
+  }
+
+  .section--3-headers {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 600px) {
@@ -997,30 +1160,8 @@ header {
   } */
 
 /**** landing page content /****
-  /*  About
-    Services
-    Projects
-    Contact
-  
-    We are creatives
-  
-    Transform your brand
-  
+  /* 
     
-  
-    Learn more
-  
-   
-  
-   
-  
-    Learn more
-  
-    Graphic design
-    Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-  
-    Photography
-    Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
   
     Client testimonials
   
@@ -1047,6 +1188,16 @@ header {
   color: hsl(212 27% 19% / var(--tw-text-opacity));
 }
 
+@media (min-width: 400px) {
+  .smImgs\:block {
+    display: block;
+  }
+
+  .smImgs\:hidden {
+    display: none;
+  }
+}
+
 @media (min-width: 700px) {
   .lgImgs\:block {
     display: block;
@@ -1058,10 +1209,6 @@ header {
 }
 
 @media (min-width: 805px) {
-  .md\:block {
-    display: block;
-  }
-
   .md\:flex {
     display: flex;
   }
