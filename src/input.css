@@ -170,6 +170,11 @@ header {
   font-family: "Barlow", sans-serif;
 }
 
+.photos-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @keyframes move {
   0% {
     margin-top: 0;
@@ -182,14 +187,13 @@ header {
   }
 }
 
+/* media queries */
 @media (max-width: 1400px) {
   .testimonials-container {
     padding-left: 0;
     padding-right: 0;
   }
   .testimonials {
-    /* gap: 4rem; */
-
     justify-content: space-between;
   }
 }
@@ -220,6 +224,9 @@ header {
   .section-3-info-container {
     bottom: -7%;
     transform: translate(-50%, -7%);
+  }
+  .photos-container {
+    margin-top: 0;
   }
 }
 
@@ -335,6 +342,10 @@ header {
   .testimonial-content {
     width: 70%;
   }
+  .photos-container {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 7rem;
+  }
 }
 @media (max-width: 700px) {
   .header-title {
@@ -421,6 +432,9 @@ header {
 
   .testimonial-content {
     width: 85%;
+  }
+  .photos-container {
+    margin-top: 4.5rem;
   }
 }
 
@@ -510,6 +524,7 @@ header {
     white-space: nowrap;
   }
 }
+/* media queries ending */
 
 /* font-family: 'Barlow', sans-serif; */
 /* font-family: 'Fraunces', serif; */
@@ -526,19 +541,7 @@ header {
   /* 
     
   
-    Client testimonials
-  
-    We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-    Emily R.
-    Marketing Director
-  
-    Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-    Thomas S.
-    Chief Operating Officer
-  
-    Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-    Jennie F.
-    Business Owner
+
   
     About
     Services

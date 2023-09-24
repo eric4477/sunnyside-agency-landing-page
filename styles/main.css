@@ -559,6 +559,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-\[2\.5rem\] {
+  margin-top: 2.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -643,12 +647,12 @@ video {
   justify-content: space-around;
 }
 
-.gap-10 {
-  gap: 2.5rem;
+.gap-1 {
+  gap: 0.25rem;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-3 {
@@ -679,10 +683,6 @@ video {
 
 .p-6 {
   padding: 1.5rem;
-}
-
-.p-\[7rem\] {
-  padding: 7rem;
 }
 
 .p-\[6\.5rem\] {
@@ -723,6 +723,11 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -975,6 +980,11 @@ header {
   font-family: "Barlow", sans-serif;
 }
 
+.photos-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @keyframes move {
   0% {
     margin-top: 0;
@@ -989,6 +999,8 @@ header {
   }
 }
 
+/* media queries */
+
 @media (max-width: 1400px) {
   .testimonials-container {
     padding-left: 0;
@@ -996,7 +1008,6 @@ header {
   }
 
   .testimonials {
-    /* gap: 4rem; */
     justify-content: space-between;
   }
 }
@@ -1030,6 +1041,10 @@ header {
   .section-3-info-container {
     bottom: -7%;
     transform: translate(-50%, -7%);
+  }
+
+  .photos-container {
+    margin-top: 0;
   }
 }
 
@@ -1165,6 +1180,11 @@ header {
   .testimonial-content {
     width: 70%;
   }
+
+  .photos-container {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 7rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1261,6 +1281,10 @@ header {
 
   .testimonial-content {
     width: 85%;
+  }
+
+  .photos-container {
+    margin-top: 4.5rem;
   }
 }
 
@@ -1363,6 +1387,8 @@ header {
   }
 }
 
+/* media queries ending */
+
 /* font-family: 'Barlow', sans-serif; */
 
 /* font-family: 'Fraunces', serif; */
@@ -1379,19 +1405,7 @@ header {
   /* 
     
   
-    Client testimonials
-  
-    We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-    Emily R.
-    Marketing Director
-  
-    Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-    Thomas S.
-    Chief Operating Officer
-  
-    Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-    Jennie F.
-    Business Owner
+
   
     About
     Services
@@ -1425,6 +1439,10 @@ header {
 }
 
 @media (min-width: 805px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }
