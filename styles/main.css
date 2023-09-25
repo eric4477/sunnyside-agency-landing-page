@@ -559,8 +559,20 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-\[2\.1rem\] {
+  margin-top: 2.1rem;
+}
+
 .mt-\[2\.5rem\] {
   margin-top: 2.5rem;
+}
+
+.mt-\[4rem\] {
+  margin-top: 4rem;
+}
+
+.mt-\[4\.5rem\] {
+  margin-top: 4.5rem;
 }
 
 .flex {
@@ -589,6 +601,10 @@ video {
 
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-\[10rem\] {
+  width: 10rem;
 }
 
 .w-\[11rem\] {
@@ -627,6 +643,10 @@ video {
   flex-basis: 33.333333%;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -647,6 +667,10 @@ video {
   justify-content: space-around;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -655,12 +679,28 @@ video {
   gap: 2.5rem;
 }
 
+.gap-14 {
+  gap: 3.5rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
 
 .gap-\[3rem\] {
   gap: 3rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .rounded-\[50\%\] {
@@ -681,6 +721,10 @@ video {
      object-fit: cover;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -697,6 +741,15 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-\[3\.5rem\] {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pt-10 {
@@ -800,6 +853,18 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: hsl(0 0% 100% / var(--tw-text-opacity));
+}
+
+.opacity-\[0\.6\] {
+  opacity: 0.6;
+}
+
+.opacity-\[0\.8\] {
+  opacity: 0.8;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 * {
@@ -983,6 +1048,14 @@ header {
 .photos-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-container {
+  background-color: hsl(168, 51%, 70%);
+}
+
+.info {
+  font-family: "Barlow", sans-serif;
 }
 
 @keyframes move {
@@ -1416,6 +1489,11 @@ header {
 .hover\:text-veryDarkDesaturatedBlue:hover {
   --tw-text-opacity: 1;
   color: hsl(212 27% 19% / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 100% / var(--tw-text-opacity));
 }
 
 @media (min-width: 400px) {
