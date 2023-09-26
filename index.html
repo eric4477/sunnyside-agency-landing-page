@@ -30,7 +30,9 @@
     <!--header-->
     <header>
       <!--navbar-->
-      <nav class="w-[98%] mx-auto p-6 pt-10 flex justify-between items-center">
+      <nav
+        class="w-[98%] mx-auto p-6 pt-10 flex justify-between items-center shrink-0"
+      >
         <div class="header-logo">
           <img class="w-[11rem]" src="images/logo.svg" alt="header-logo" />
         </div>
@@ -56,19 +58,27 @@
             <a href="#">CONTACT</a>
           </button>
         </div>
-        <!--mobile hamburger-->
-        <div
-          class="mobile-hamburger flex items-center justify-center md:hidden"
-        >
-          <button class="mobile-hamburger-button">
+        <!--hamburger-->
+        <div class="hamburger flex items-center justify-center md:hidden">
+          <button class="hamburger-button">
             <img
-              class="mobile-hamburger-icon w-[1.8rem]"
+              class="hamburger-icon w-[1.8rem]"
               src="images/icon-hamburger.svg"
               alt="mobile-hamburger"
             />
           </button>
+          <div class="hamburger-menu hidden pointer-events-none opacity-0">
+            <a class="about info text-darkGrayishBlue" href="#">About</a>
+            <a class="services info text-darkGrayishBlue" href="#">Services</a>
+            <a class="projects info text-darkGrayishBlue" href="#">Projects</a>
+
+            <button class="bg-yellow rounded-full">
+              <a href="#">CONTACT</a>
+            </button>
+          </div>
         </div>
-        <!--mobile hamburger ending-->
+
+        <!--hamburger ending-->
       </nav>
       <!--navbar ending-->
       <h1 class="header-title text-white text-[3.5rem] tracking-[0.5rem]">

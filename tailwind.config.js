@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       screens: {
         lgImgs: "700px",
-        smImgs: "400px",
+        smImgs: "441px",
         md: "805px",
       },
     },
